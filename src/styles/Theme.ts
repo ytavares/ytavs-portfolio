@@ -5,8 +5,8 @@ const Theme = {
       main: "#56C9F4",
       contrastText: "#c1d9d0",
     },
-    secundary: {
-      main: "#736681",
+    secondary: {
+      main: "#9C27B0",
       contrastText: "#62455b",
     },
     grey: {

@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const ContainerBox = styled.div`
-  display: flex;
-  flex-direction: row; 
-  max-width: 1280px;
+  max-width: 1300px;
   width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
 `
