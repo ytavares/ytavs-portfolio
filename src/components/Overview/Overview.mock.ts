@@ -6,7 +6,7 @@ export const overviewProps: OverviewProps = {
   'link': [
     {
       linkText: 'Sobre mim',
-      linkRedirect: '#'
+      linkRedirect: '#contactSection'
     }
   ]
 }

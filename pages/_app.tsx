@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-css-tags */
+/* eslint-disable @next/next/no-sync-scripts */
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable react/react-in-jsx-scope */
 import { GlobalStyles } from '@/styles/global';
@@ -17,10 +19,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;700&display=swap"
           rel="stylesheet"
         ></link>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
       </Head>
       <GlobalStyles />
       <Container>

@@ -9,7 +9,7 @@ export const HeaderBox = styled.div`
   top: 32px;
   left: 20px;
 `
-export const ContactButton = styled.button`
+export const ContactButton = styled.a`
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.color.primary.main};
   display: flex;

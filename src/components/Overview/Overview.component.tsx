@@ -20,7 +20,7 @@ export const Overview: FunctionComponent<OverviewProps> = ({
   return (
     <OverviewBox>
       <Content>
-        <TitleOverview className="animate__lightSpeedInLeft animate__delay-2s">
+        <TitleOverview className="animate__lightSpeedInLeft">
           {title}
         </TitleOverview>
         <DescriptionOverview className="animate__lightSpeedInRight animate__delay-3s">

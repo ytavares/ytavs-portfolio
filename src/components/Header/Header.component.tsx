@@ -6,7 +6,7 @@ export const Header: FunctionComponent<HeaderProps> = ({ logoSrc }) => {
   return (
     <HeaderBox>
       <ContactButton>Logo</ContactButton>
-      <ContactButton>Contato</ContactButton>
+      <ContactButton href="#contactSection">Contato</ContactButton>
     </HeaderBox>
   );
 };

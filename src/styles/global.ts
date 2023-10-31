@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from 'styled-components';
 
 import teste from '../../public/images/pattern.png';
 
@@ -11,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 		font-family: 'Bai Jamjuree', sans-serif;
 		background: #141416;
 		background-image: url(${teste.src});
+		scroll-behavior: smooth;
 	}
 
 	a {
@@ -23,3 +25,7 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 `;
+
+export const TemplateComponent = styled.div`
+
+`
