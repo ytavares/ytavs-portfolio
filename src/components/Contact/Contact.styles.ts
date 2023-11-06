@@ -4,10 +4,60 @@ export const ContactBox = styled.section`
   height: 100vh;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+`
+export const FormContent = styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  max-width: 100%;
+`
+export const SocialsContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+export const SocialItem = styled.a`
+  background: #1E1E1E;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(50% - 20px);
+  height: 200px;
+  svg {
+    color: #CCCCCC;
+    font-size: 48px;
+  }
+  &:hover {
+    svg, p {
+      color: ${(props) => props.theme.color.primary.main};
+      transition: 1s; 
+    }
+  }
+`
+export const SocialTitle = styled.p`
+  color: #FFF;
+  margin: 0;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Bai Jamjuree;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 `
 export const ContactTitle = styled.h2`
   color: ${(props) => props.theme.color.primary.main};
@@ -17,6 +67,46 @@ export const ContactTitle = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: 54px;
+  
+  -webkit-animation: puff-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  @-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  }
+  @keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @media (max-width: 768px) {
+    font-size: 48px;
+    line-height: 36px;
+    text-align: center;
+  }
 `
 export const ContactContent = styled.div`
   display: flex;
@@ -76,6 +166,41 @@ export const FormContact = styled.form`
   textarea {
     width: 100%;
     min-height: 10em;
+  }
+  
+  -webkit-animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  @-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+  }
+  @keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
   }
   @media (max-width: 768px) {
     max-width: 100%;

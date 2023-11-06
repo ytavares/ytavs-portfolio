@@ -8,7 +8,7 @@ import {
   AboutSubtitle,
   AboutText,
   AboutTitle,
-} from './About.stytes';
+} from './About.styles';
 import aboutImage from '../../../public/images/mainPhoto.png';
 import Image from 'next/image';
 
@@ -19,7 +19,7 @@ export const About: FunctionComponent<AboutProps> = ({
   textSecond,
 }) => {
   return (
-    <AboutBox>
+    <AboutBox className="hidden">
       <AboutImage>
         <Image src={aboutImage} alt="mainPhoto" />
       </AboutImage>

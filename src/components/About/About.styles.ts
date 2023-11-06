@@ -1,29 +1,38 @@
 import styled from 'styled-components';
 
-export const OverviewBox = styled.section`
+export const AboutBox = styled.section`
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
-`
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 630px;
-  @media (min-width: 768px) and (max-width: 1300px){
-    max-width: 100%;
+  align-items: center;
+  position: relative;
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 `
-export const TitleOverview = styled.h2`
+export const AboutContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 573px;
+`
+export const AboutSecondContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 541px;
+`
+export const AboutTitle = styled.h2`
   color: #FFF;
-  font-size: 48px;
+  font-family: Bai Jamjuree;
+  font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin: 0;
-  margin-bottom: 14px;
+  z-index: 500;
   -webkit-animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   @-webkit-keyframes slide-in-left {
@@ -52,19 +61,20 @@ export const TitleOverview = styled.h2`
   }
   @media (max-width: 768px) {
     font-size: 38px;
-    line-height: 24px;
-    margin-bottom: 20px;
+    line-height: 36px;
+    text-align: center;
   }
 `
-export const DescriptionOverview = styled.p`
-  color: ${(props) => props.theme.color.grey.main};
+export const AboutSubtitle = styled.p`
+  color: ${(props) => props.theme.color.primary.main};
+  font-family: Bai Jamjuree;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 0;
-  margin-bottom: 14px;
-  -webkit-animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  margin: 16px 0 0 0;
+  z-index: 500;
+  /* -webkit-animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   @-webkit-keyframes slide-in-right {
   0% {
@@ -89,20 +99,23 @@ export const DescriptionOverview = styled.p`
               transform: translateX(0);
       opacity: 1;
     }
-  }
+  } */
   @media (max-width: 768px) {
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 40px;
   }
 `
-export const LinkOverview = styled.a`
-  color: ${(props) => props.theme.color.primary.main};
-  font-size: 18px;
+export const AboutText = styled.p`
+  color:${(props) => props.theme.color.grey.main};
+  font-family: Bai Jamjuree;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
-  transition: 0.6s;
-  max-width: fit-content;
-  -webkit-animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  margin: 0;
+  z-index: 500;
+  /* -webkit-animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
   animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
   @-webkit-keyframes puff-in-center {
   0% {
@@ -136,43 +149,39 @@ export const LinkOverview = styled.a`
       opacity: 1;
     }
   }
-  &:hover {
-    color: ${(props) => props.theme.color.secondary.main};
+  &.second {
+    margin-top: 16px;
+  } */
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 18px;
   }
 `
-export const PcOverview = styled.div`
-  max-width: 630px;
-  max-height: 728px;
-  width: 100%;
-  height: auto;
-  position: relative;
+export const AboutImage = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 567px;
+  max-height: 563px;
   img {
-    max-width: 100%;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
-  .tag {
-    position: absolute;
-    top: 38%;
-    left: 27%;
-    max-width: fit-content;
-    transform: translatey(0px);
-    animation: float 6s ease-in-out infinite;
-    @keyframes float {
-      0% {
-        transform: translatey(0px);
-      }
-      50% {
-        transform: translatey(-20px);
-      }
-      100% {
-        transform: translatey(0px);
-      }
-    }
-  }
-  @media (min-width: 768px) and (max-width: 1300px){
-    display: none;
-  }
-
+  
   @media (max-width: 768px) {
-    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-width: 400px;
+      max-height: 400px;
+      margin-bottom: 40px;
+    }
   }
 `

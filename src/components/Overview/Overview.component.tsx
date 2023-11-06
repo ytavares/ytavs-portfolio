@@ -18,19 +18,18 @@ export const Overview: FunctionComponent<OverviewProps> = ({
   link,
 }) => {
   return (
-    <OverviewBox>
+    <OverviewBox className="hidden">
       <Content>
-        <TitleOverview className="animate__lightSpeedInLeft">
-          {title}
-        </TitleOverview>
-        <DescriptionOverview className="animate__lightSpeedInRight animate__delay-3s">
+        <TitleOverview className="hidden">{title}</TitleOverview>
+        <DescriptionOverview className="hidden">
           {description}
         </DescriptionOverview>
         {link?.map((item) => (
           <LinkOverview
             href={item.linkRedirect}
             key={item.linkText}
-            className="animate__fadeIn animate__delay-4s"
+            target="__blank"
+            className="hidden"
           >
             {item.linkText}
           </LinkOverview>

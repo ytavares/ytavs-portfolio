@@ -24,6 +24,25 @@ export const GlobalStyles = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
+	.hidden {
+		opacity: 0;
+		transition: opacity 1s linear;
+	}
+	.show {
+		opacity: 1;		
+	}
+	*::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	*::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: ${(props) => props.theme.color.primary.main};
+		border-radius: 20px;
+	}
 `;
 
 export const TemplateComponent = styled.div`

@@ -7,7 +7,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Theme from '@/styles/Theme';
 import { ThemeProvider } from 'styled-components';
-import { Container } from '@/components';
+import Script from 'next/script';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -20,10 +20,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         ></link>
       </Head>
+      <Script src="animation.js" />
       <GlobalStyles />
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }

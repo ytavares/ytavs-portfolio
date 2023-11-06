@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@fullpage/react-fullpage": "^0.1.40",
+    "@icons-pack/react-simple-icons": "^9.1.0",
+    "@react-icons/all-files": "^4.1.0",
     "@types/node": "20.6.4",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
+    "akar-icons": "^1.9.30",
     "animate.css": "^4.1.1",
     "eslint": "8.50.0",
     "eslint-config-next": "13.5.2",
@@ -20,6 +24,7 @@
     "next": "13.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
     "styled-components": "^6.1.0",
     "typescript": "5.2.2"
   }
