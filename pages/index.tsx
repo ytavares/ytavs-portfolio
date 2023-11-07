@@ -12,18 +12,28 @@ import { contactProps } from '@/components/Contact/Contact.mock';
 import { footerProps } from '@/components/Footer/Footer.mock';
 import { overviewProps } from '@/components/Overview/Overview.mock';
 import { skillsProps } from '@/components/Skills/Skills.mock';
+import { TemplateComponent } from '@/styles/global';
+import ReactFullpage from '@fullpage/react-fullpage';
 
 export default function Home() {
   return (
-    <>
-      <Container>
-        <Header />
-        <Overview {...overviewProps} />
-        <About {...aboutProps} />
-        <Skills {...skillsProps} />
-        <Contact {...contactProps} />
-      </Container>
-      <Footer {...footerProps} />
-    </>
+    <ReactFullpage
+      credits={{ enabled: false }}
+      render={({ state, fullpageApi }) => {
+        return (
+          <ReactFullpage.Wrapper>
+            <TemplateComponent>
+              <Container>
+                <Header />
+                <Overview {...overviewProps} />
+                <About {...aboutProps} />
+                <Skills {...skillsProps} />
+                <Contact {...contactProps} />
+              </Container>
+            </TemplateComponent>
+          </ReactFullpage.Wrapper>
+        );
+      }}
+    />
   );
 }

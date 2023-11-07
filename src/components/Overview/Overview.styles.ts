@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const OverviewBox = styled.section`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  .fp-overflow {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 `
 export const Content = styled.div`
   display: flex;

@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
 export const FooterBox = styled.section`
-  width: 100%;
-  height: 55px;
   background: #0C2129;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .fp-overflow {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fp-watermark {
+    display: none!important;
+  }
 `
 export const FooterText = styled.p`
   margin: 0;

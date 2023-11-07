@@ -57,7 +57,7 @@ export const Contact: FunctionComponent<ContactProps> = ({
   }
 
   return (
-    <ContactBox id="contactSection" className="hidden">
+    <ContactBox id="contactSection" className="hidden section">
       <FormContent>
         <ContactTitle>{title}</ContactTitle>
         <FormContact method="post" action="#" onSubmit={sendEmail}>

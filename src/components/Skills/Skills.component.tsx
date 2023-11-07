@@ -18,7 +18,7 @@ export const Skills: FunctionComponent<SkillsProps> = ({
   skills,
 }) => {
   return (
-    <SkillsBox className="hidden">
+    <SkillsBox className="hidden section">
       <SkillsSubtitle>{subtitle}</SkillsSubtitle>
       <SkillsTitle>{title}</SkillsTitle>
       <SkillsDescription>{description}</SkillsDescription>

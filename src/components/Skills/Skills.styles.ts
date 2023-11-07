@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 export const SkillsBox = styled.section `
-  height: 100vh;
-  width: 100%;
-  max-width: 940px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 43px;
-  margin: 0 auto;
+  .fp-overflow {
+    height: 100vh;
+    display: flex;
+    max-width: 940px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+  }
   @media (max-width: 768px) {
     gap: inherit;
     margin-top: 120px;
@@ -41,12 +42,12 @@ export const SkillsTitle = styled.h2`
   font-weight: 700;
   line-height: 54px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 10px 0 20px;
   @media (max-width: 768px) {
     font-size: 36px;
     line-height: 36px;
     text-align: center;
-    margin: 20px 0 40px 0;
+    margin: 10px 0 20px 0;
   }
 `
 export const SkillsDescription = styled.p`
@@ -57,11 +58,11 @@ export const SkillsDescription = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  margin: 0;
+  margin: 0 0 40px 0;
   @media (max-width: 768px) {
     margin-bottom: 80px;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 22px;
   }
 `
 export const SkillsIcons = styled.div`

@@ -1,17 +1,22 @@
 import styled from 'styled-components';
 
 export const AboutBox = styled.section`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  position: relative;
-  @media (max-width: 768px) {
+  .fp-overflow {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    position: relative;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .fp-overflow {
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
   }
 `
 export const AboutContent = styled.div`
@@ -113,7 +118,7 @@ export const AboutText = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 0;
+  margin: 0 0 16px 0;
   z-index: 500;
   /* -webkit-animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
   animation: puff-in-center 1.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
@@ -155,6 +160,7 @@ export const AboutText = styled.p`
   @media (max-width: 768px) {
     text-align: center;
     font-size: 18px;
+    line-height: 22px;
   }
 `
 export const AboutImage = styled.div`

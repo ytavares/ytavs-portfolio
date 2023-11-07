@@ -18,7 +18,7 @@ export const Overview: FunctionComponent<OverviewProps> = ({
   link,
 }) => {
   return (
-    <OverviewBox className="hidden">
+    <OverviewBox className="hidden section">
       <Content>
         <TitleOverview className="hidden">{title}</TitleOverview>
         <DescriptionOverview className="hidden">

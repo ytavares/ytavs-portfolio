@@ -19,7 +19,7 @@ export const About: FunctionComponent<AboutProps> = ({
   textSecond,
 }) => {
   return (
-    <AboutBox className="hidden">
+    <AboutBox className="hidden section">
       <AboutImage>
         <Image src={aboutImage} alt="mainPhoto" />
       </AboutImage>

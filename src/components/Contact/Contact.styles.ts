@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 
 export const ContactBox = styled.section`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+  .fp-overflow {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .fp-watermark {
+    display: none!important;
+  }
 `
 export const FormContent = styled.div`
   display: flex;
@@ -230,8 +234,9 @@ export const InputForm = styled.div`
     transition: all 0.25s ease;
     pointer-events: none;
   }
-  @media only screen and (max-width: 768px){     
+  @media (max-width: 768px){     
     width:100%; 
+    margin: 8px 0 !important;
   }
 `
 export const ButtonForm = styled.button`
