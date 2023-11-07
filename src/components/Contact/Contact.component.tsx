@@ -2,17 +2,22 @@ import { FunctionComponent, useState } from 'react';
 import { ContactProps } from './Contact.interface';
 import {
   ButtonForm,
+  CloseButton,
   ContactBox,
   ContactTitle,
   DualInputForm,
   FormContact,
   FormContent,
   InputForm,
+  ModalDiv,
+  ModalTitle,
   SocialItem,
   SocialTitle,
   SocialsContent,
 } from './Contact.styles';
 import emailjs from '@emailjs/browser';
+import Modal from 'react-modal';
+import { AiFillCheckCircle, AiOutlineClose } from 'react-icons/ai';
 
 export const Contact: FunctionComponent<ContactProps> = ({
   title,
@@ -22,6 +27,7 @@ export const Contact: FunctionComponent<ContactProps> = ({
   const [email, setEmail] = useState('');
   const [assunto, setAssunto] = useState('');
   const [mensagem, setMensagem] = useState('');
+  const [modalIsOpen, setIsOpen] = useState(false);
 
   function sendEmail(e: any) {
     const templateParams = {
@@ -45,6 +51,7 @@ export const Contact: FunctionComponent<ContactProps> = ({
           setEmail('');
           setAssunto('');
           setMensagem('');
+          setIsOpen(true);
         },
         (err) => {
           console.log('Error:', err);
@@ -52,15 +59,35 @@ export const Contact: FunctionComponent<ContactProps> = ({
       );
 
     e.preventDefault();
+  }
 
-    alert('teste');
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      borderRadius: '20px',
+      background: '#FFF',
+    },
+  };
+
+  function closeModal(e: any) {
+    e.preventDefault();
+    setIsOpen(false);
   }
 
   return (
     <ContactBox data-anchor="contactSection" className="hidden section">
       <FormContent>
         <ContactTitle>{title}</ContactTitle>
-        <FormContact method="post" action="#" onSubmit={sendEmail}>
+        <FormContact
+          method="post"
+          action="#"
+          onSubmit={sendEmail /*() => setIsOpen(true)*/}
+        >
           <InputForm className="full">
             <input
               type="text"
@@ -120,6 +147,20 @@ export const Contact: FunctionComponent<ContactProps> = ({
           </SocialItem>
         ))}
       </SocialsContent>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Modal de envio"
+      >
+        <ModalDiv>
+          <CloseButton onClick={closeModal}>
+            <AiOutlineClose className="closedIcon" />
+          </CloseButton>
+          <AiFillCheckCircle className="checkIcon" />
+          <ModalTitle>E-mail enviado com sucesso!</ModalTitle>
+        </ModalDiv>
+      </Modal>
     </ContactBox>
   );
 };

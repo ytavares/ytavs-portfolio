@@ -266,4 +266,48 @@ export const ButtonForm = styled.button`
     text-align:center;
   }
 `
+export const ModalDiv = styled.div`
+  position: relative;
+  height: 250px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .checkIcon{
+    color: ${(props) => props.theme.color.primary.main};
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+`
+export const CloseButton = styled.button`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: ${(props) => props.theme.color.grey.main};
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .closedIcon{
+    font-size: 18px;
+  }
+  &:hover {
+    background: #c9c9c9;
+    color: ${(props) => props.theme.color.secondary.main};
+  }
+`
+export const ModalTitle = styled.h3`
+  font-size: 28px;
+  color: ${(props) => props.theme.color.secondary.main};
+  text-align: center;
+  font-family: Bai Jamjuree;
+  font-style: normal;
+  margin: 0;
+`
 

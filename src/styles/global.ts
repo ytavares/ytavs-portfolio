@@ -12,7 +12,6 @@ export const GlobalStyles = createGlobalStyle`
 		font-family: 'Bai Jamjuree', sans-serif;
 		background: #141416;
 		background-image: url(${teste.src});
-		scroll-behavior: smooth;
 	}
 
 	a {
@@ -43,6 +42,9 @@ export const GlobalStyles = createGlobalStyle`
 		background-color: ${(props) => props.theme.color.primary.main};
 		border-radius: 20px;
 	}
+  .ReactModal__Overlay.ReactModal__Overlay--after-open {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+  }
 `;
 
 export const TemplateComponent = styled.div`
