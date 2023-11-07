@@ -16,7 +16,7 @@ export const Header: FunctionComponent<HeaderProps> = ({ logoSrc }) => {
     <HeaderBox>
       <Container>
         <HeaderBoxContent>
-          <HeaderLogoBox href="#">
+          <HeaderLogoBox>
             <Image src={firstLogo} alt="iconLogo" className="iconLogo" />
             <Image src={secondLogo} alt="textLogo" className="textLogo" />
           </HeaderLogoBox>

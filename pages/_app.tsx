@@ -23,7 +23,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Script src="animation.js" />
       <GlobalStyles />
-      <Header />
       <Component {...pageProps} />
     </ThemeProvider>
   );

@@ -19,6 +19,13 @@ export default function Home() {
   return (
     <ReactFullpage
       credits={{ enabled: false }}
+      scrollBar
+      anchors={[
+        '#overview',
+        '#aboutSection',
+        '#skillsSection',
+        '#contactSection',
+      ]}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>

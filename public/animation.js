@@ -27,11 +27,3 @@ document.addEventListener('scroll', (event) => {
     }
     currentPos = window.scrollY;
 })
-document.addEventListener('scrollend', (event) => {
-    logoObject.classList.remove('rotateLeft')
-    logoObject.classList.remove('rotateRight')
-})
-
-/**
- * Config fullpage.js
- */
