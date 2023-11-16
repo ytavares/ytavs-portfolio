@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 export const FooterBox = styled.section`
   background: #0C2129;
-  .fp-overflow {
-    width: 100%;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   .fp-watermark {
     display: none!important;
   }

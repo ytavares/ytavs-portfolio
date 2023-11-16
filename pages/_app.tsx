@@ -8,7 +8,8 @@ import Head from 'next/head';
 import Theme from '@/styles/Theme';
 import { ThemeProvider } from 'styled-components';
 import Script from 'next/script';
-import { Container, Header } from '@/components';
+import { Container, Footer, Header } from '@/components';
+import { footerProps } from '@/components/Footer/Footer.mock';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -24,6 +25,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Script src="animation.js" />
       <GlobalStyles />
       <Component {...pageProps} />
+      <Footer {...footerProps} />
     </ThemeProvider>
   );
 }
